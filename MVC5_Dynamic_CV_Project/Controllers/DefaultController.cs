@@ -42,5 +42,22 @@ namespace MVC5_Dynamic_CV_Project.Controllers
             var certificas = db.Certificas.ToList();
             return PartialView(certificas);
         }
+        [HttpGet]
+        public PartialViewResult Contact()
+        {
+            return PartialView();
+        }
+        [HttpPost]
+        public PartialViewResult Contact(Contacts c)
+        {
+            c.Date = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+            if (ModelState.IsValid)
+            {
+                db.Contacts.Add(c);
+                db.SaveChanges();
+                ViewBag.ResultMessage = "Mesaınız alınmıştır!";
+            }            
+            return PartialView();
+        }
     }
 }

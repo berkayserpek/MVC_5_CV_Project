@@ -238,6 +238,7 @@
     <Content Include="Views\Default\Skill.cshtml" />
     <Content Include="Views\Default\Hobbie.cshtml" />
     <Content Include="Views\Default\Certifica.cshtml" />
+    <Content Include="Views\Default\Contact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
